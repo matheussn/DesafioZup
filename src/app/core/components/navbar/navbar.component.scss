@@ -1,6 +1,21 @@
+@import '../../../app.component.scss';
+
 .Navbar {
+    background-color: $bg-primary !important;
     &__search {
         border-radius: 20px;
         width: 100%;
+        padding-left: 2.5rem;
+
+        &__icon {
+            position:absolute;
+            top: 0.6rem;
+            left: 1.75rem;
+            z-index:10;
+            border:none;
+            background:transparent;
+            outline:none;
+            color: $color-primary;
+        }
     }
 }

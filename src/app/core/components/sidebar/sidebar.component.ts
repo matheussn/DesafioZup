@@ -7,6 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  items = [
+    {
+      name: 'Todos',
+      route: '',
+      icon: {
+        categorie: 'brands',
+        size: 'tiny',
+        name: 'dashcube'
+      }
+    },
+    {
+      name: 'Atendidos',
+      route: '',
+      icon: {
+        categorie: 'brands',
+        size: 'tiny',
+        name: 'dashcube'
+      }
+    },
+    {
+      name: 'Lixeira',
+      route: '',
+      icon: {
+        categorie: 'brands',
+        size: 'tiny',
+        name: 'dashcube'
+      }
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

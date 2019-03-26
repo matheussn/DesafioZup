@@ -1,6 +1,18 @@
+@import '../../../app.component.scss';
+
 .Sidebar {
     background-color: #ffffff;
-    width: fit-content;
+    position: absolute;
+
+    &__item {
+        span {
+            margin-left: .75rem;
+        }
+
+        & :hover {
+            color: $color-primary;
+        }
+    }
 
     a {
         color: #999999;
