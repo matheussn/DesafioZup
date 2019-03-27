@@ -1,8 +1,21 @@
-.Sidebar {
-    background-color: #ffffff;
-    width: fit-content;
+@import '../../../../assets/scss/variables.scss';
 
-    a {
-        color: #999999;
+.sidebar {
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+
+    &_item {
+        .a {
+            color: #999999;
+        }
+        
+        &--name {
+            margin-left: .75rem;
+        }
+
+        & :hover {
+            color: $color-primary;
+        }
     }
 }

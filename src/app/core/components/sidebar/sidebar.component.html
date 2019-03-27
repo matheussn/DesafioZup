@@ -1,12 +1,14 @@
-<ul class="nav flex-column Sidebar">
-  <li class="nav-item">
-    <core-icon color="tests"></core-icon>
-    <a class="nav-link active" href="#">Todos</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Atendidos</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Lixeira</a>
-  </li>
-</ul>
+<div class="sidebar">
+  <ul class="nav flex-column">
+    <li *ngFor="let item of items" class="nav-item sidebar_item">
+      <a class="nav-link a" href="#">
+          <core-icon 
+            [categorie]="item.icon.categorie"
+            [size]="item.icon.size"
+            [name]="item.icon.name"
+          ></core-icon>
+          <span class="sidebar_item--name">{{item.name}}</span>
+      </a>
+    </li>
+  </ul>
+</div>

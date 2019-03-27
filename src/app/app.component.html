@@ -1,4 +1,12 @@
 <div>
-  <core-navbar></core-navbar>
+  <core-navbar
+    (mudouQuery)="setQuery($event)"
+  ></core-navbar>
   <core-sidebar></core-sidebar>
+
+  <div>{{title}}</div>
 </div>
+
+<!--
+  *ngIf X hidden
+-->

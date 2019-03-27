@@ -1,13 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark navbar">
   <div class="container-fluid">
     <div class="col-sm-2">
-      <a>ZUP</a>
+      <img 
+        class="img-fluid"
+        src="https://www.google.com/a/cpanel/zup.com.br/images/logo.gif?service=google_gsuite"
+        height="100"
+        width="100"
+      />
     </div>
     <div class="col-sm-8">
-      <input class="Navbar__search"/>
+      <input
+        #query
+        (keyup)="alterar(query.value)"
+        class="navbar_search form-control"
+        placeholder="Buscar"
+      >
+      <core-icon categorie="solid" size="tiny" name="search" class="navbar_search--icon"></core-icon>
     </div>
     <div class="col-sm-2">
-      <a>User</a>
+      <core-icon categorie="solid" size="medium" name="user-circle" ></core-icon>
     </div>
   </div>
 </nav>

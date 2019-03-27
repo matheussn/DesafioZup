@@ -1,6 +1,21 @@
-.Navbar {
-    &__search {
+@import '../../../../assets/scss/variables.scss';
+
+.navbar {
+    background-color: $bg-primary;
+    &_search {
         border-radius: 20px;
         width: 100%;
+        padding-left: 2.5rem;
+
+        &--icon {
+            position:absolute;
+            top: 0.6rem;
+            left: 1.75rem;
+            z-index:10;
+            border:none;
+            background:transparent;
+            outline:none;
+            color: $color-primary;
+        }
     }
 }
