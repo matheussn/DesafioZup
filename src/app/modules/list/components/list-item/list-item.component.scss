@@ -1,0 +1,11 @@
+@import 'src/assets/scss/variables.scss';
+
+.item {
+    list-style: none;
+
+    &_icon {
+        & :hover {
+            color: $color-primary;
+        }
+    }
+}

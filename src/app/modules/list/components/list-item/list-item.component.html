@@ -1,0 +1,66 @@
+<li class="item">
+  <div class="container">
+    <div class="row m-2">
+      <!-- IMG -->
+        <div class="col-lg-1">
+            <img class="rounded-circle" [src]="item.picture.thumbnail" />
+        </div>
+
+      <!-- Name -->
+        <div class="col-lg-2 text-left m-auto">
+          <h5>
+            <a routerLink="user/{{item.name.first}}">
+            {{ item.name.first }}
+          </a>
+          </h5>
+        </div>
+
+      <!-- Email -->
+        <div class="col-lg-3 m-auto">
+          {{ item.email }}
+        </div>
+
+      <!-- Phone -->
+        <div class="col-lg-2 m-auto">
+          {{ item.phone }}
+        </div>
+
+      <!-- Location -->
+        <div class="col-lg-3 m-auto">
+          {{ item.location.city }} - {{ item.location.state }}
+        </div>
+
+      <!-- Icons -->
+        <div class="col-lg-1 m-auto">
+          <span class="item_icon">
+            <core-icon *ngIf="!(url == '/trash')"
+              (click)="setUser(item.login.username,'trash')"
+              class=""
+              categorie="solid"
+              size="tiny"
+              name="trash"
+            ></core-icon>
+          </span>
+          <span class="item_icon">
+            <core-icon *ngIf="!(url == '/')"
+              (click)="setUser(item.login.username,'all')"
+              class="item_icon"
+              categorie="solid"
+              size="tiny"
+              name="vector-square"
+            ></core-icon>
+          </span>
+          <span class="item_icon">
+            <core-icon *ngIf="!(url == '/attended')"
+              (click)="setUser(item.login.username,'attended')"
+              class="item_icon"
+              categorie="solid"
+              size="tiny"
+              name="check"
+            ></core-icon>
+          </span>
+        </div>
+
+    </div>
+  </div>
+</li>

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <div class="container-fluid">
+    <div class="col-8 col-sm-2">
+      <button class="navbar-toggler" type="button" (click)="toggleSide($event)">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar_imgwrapper">
+        <img 
+          class="mx-auto navbar_imgwrapper--img"
+          src="https://www.google.com/a/cpanel/zup.com.br/images/logo.gif?service=google_gsuite"
+        />
+      </div>
+    </div>
+    <div class="col-2 col-sm-8 navbar_search">
+      <input
+        #query
+        (keyup)="alterar(query.value)"
+        class="navbar_search--input {{ search ? 'open ': ''}} form-control "
+        placeholder="Buscar"
+      >
+      <core-icon 
+        categorie="solid"
+        size="tiny"
+        name="search"
+        class="navbar_search--icon"
+        (click)="toggleSearch()">
+      </core-icon>
+    </div>
+    <div class="collapse navbar-collapse col-sm-1" id="navbarSupportedContent">
+      <core-icon categorie="solid" size="medium" name="user-circle" ></core-icon>
+    </div>
+  </div>
+</nav>

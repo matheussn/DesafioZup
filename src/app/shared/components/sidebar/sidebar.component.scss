@@ -1,0 +1,39 @@
+@import '../../../../assets/scss/variables.scss';
+
+.sidebar {
+    z-index: 998;
+    box-shadow: 0 3px 4px 0 rgba(141, 128, 128, 0.16),0 3px 10px 0 rgba(0,0,0,0.12);
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+    width: 10rem;
+    padding: .5rem;
+
+    .navbar-nav {
+        padding: 0 .5rem 0 .65rem;
+    }
+
+    @media screen and (max-width: $sm) {
+        display: none;
+
+        &.openSide {
+            display: block;
+        }
+    }
+
+
+    &_item {
+
+        .a {
+            color: #999999;
+        }
+        
+        &--name {
+            margin-left: .75rem;
+        }
+
+        & :hover, .active {
+            color: $color-primary;
+        }
+    }
+}

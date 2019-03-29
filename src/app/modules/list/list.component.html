@@ -1,0 +1,14 @@
+<main class="main">
+    <core-navbar
+        (mudouQuery)="setQuery($event)"
+        (side)="setSide($event)"></core-navbar>
+
+    <div>
+        <core-sidebar [open]="sideOpen"></core-sidebar>
+    </div>
+    <div class="main_dash mt-5 mr-4">
+        <core-card>
+            <router-outlet></router-outlet>
+        </core-card>
+    </div>
+</main>

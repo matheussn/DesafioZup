@@ -8,7 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Desafio';
 
+  sideOpen: boolean;
+
   setQuery(event){
     console.log(event)
+  }
+
+  setSide(event) {
+    console.log(event)
+    this.sideOpen = !this.sideOpen;
   }
 }

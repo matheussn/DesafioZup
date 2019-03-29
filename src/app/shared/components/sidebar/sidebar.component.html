@@ -1,0 +1,19 @@
+<div class="sidebar {{ open ? 'openSide':''}}">
+  <ul class="navbar-nav flex-column">
+    <li *ngFor="let item of items" class="sidebar_item">
+      <a
+        [routerLink]="[item.route]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="nav-link a"
+      >
+          <core-icon 
+            [categorie]="item.icon.categorie"
+            [size]="item.icon.size"
+            [name]="item.icon.name"
+          ></core-icon>
+          <span class="sidebar_item--name">{{item.name}}</span>
+      </a>
+    </li>
+  </ul>
+</div>
