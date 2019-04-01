@@ -18,7 +18,7 @@ export class TrashUsersComponent implements OnInit {
   }
 
   getUsers(){
-    this.users = this.userService.getUsersType("trash");
+    //this.users = this.userService.getUsersType("trash");
   }
 
 }

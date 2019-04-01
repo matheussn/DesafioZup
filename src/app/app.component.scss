@@ -1,10 +1,1 @@
 @import 'src/assets/scss/variables.scss';
-
-.main {
-    &_dash{
-        margin-left: 1.5rem;
-        @media screen and (min-width: $sm) {
-            margin-left: 12rem;   
-        }
-    }
-}

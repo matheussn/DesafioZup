@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { UserRoutingModule } from './list.routing.module';
+import { ListRoutingModule } from './list.routing.module';
 import { ListComponent } from './list.component';
 import { AllUsersComponent } from './routes/all-users/all-users.component';
 import { AttendedUsersComponent } from './routes/attended-users/attended-users.component';
@@ -20,7 +20,7 @@ import { ListItemComponent } from './components/list-item/list-item.component';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule,
+    ListRoutingModule,
     SharedModule
   ],
   providers: [UserService]

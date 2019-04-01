@@ -10,7 +10,7 @@ export const MOCK =  [
     },
     {
         name: 'Atendidos',
-        route: 'attended',
+        route: '/attended',
         icon: {
             categorie: 'solid',
             size: 'tiny',
@@ -19,7 +19,7 @@ export const MOCK =  [
     },
     {
         name: 'Lixeira',
-        route: 'trash',
+        route: '/trash',
         icon: {
             categorie: 'solid',
             size: 'tiny',

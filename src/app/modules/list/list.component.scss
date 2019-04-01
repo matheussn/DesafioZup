@@ -1,4 +1,12 @@
-.user {
-    border-bottom: 2px solid #e0e0e0;
+@import 'src/assets/scss/variables.scss';
+
+.list {
     text-align: center;
+
+    &_dash{
+        margin-left: 1.5rem;
+        @media screen and (min-width: $sm) {
+            margin-left: 12rem;   
+        }
+    }
 }
