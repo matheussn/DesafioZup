@@ -1,7 +1,7 @@
-<div class="user" *ngIf="users.length== 0">
+<div class="user" *ngIf="users?.length == 0">
     SEM USUÁRIOS
 </div>
 
 <div class="user" *ngFor="let user of users">
-    <list-item [item]="user" [url]="route.url" (update)="getUsers()"></list-item>
+    <list-item [item]="user" [url]="route.url" (update)="alterUserStatus($event)"></list-item>
 </div>

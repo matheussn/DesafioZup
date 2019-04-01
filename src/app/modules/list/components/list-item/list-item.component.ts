@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UserService } from 'src/app/shared/service/user.service';
+import { UserStatus } from 'src/app/shared/enums/user-status.enum';
+import { AlterUserStatus } from 'src/app/shared/interfaces/alterUserStatus.interface';
 
 @Component({
   selector: 'list-item',
@@ -10,16 +12,15 @@ export class ListItemComponent implements OnInit {
 
   @Input() item: any;
   @Input() url: string;
-  @Output() update: EventEmitter<any> = new EventEmitter<any>();
+  @Output() update: EventEmitter<AlterUserStatus> = new EventEmitter<AlterUserStatus>();
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
-  setUser(name: string, type: string){
-    this.userService.setUser(name, type);
-    this.update.emit("update");
+  setUser(userName: string, status: UserStatus){
+    this.update.emit({ userName, status });
   }
 
 }

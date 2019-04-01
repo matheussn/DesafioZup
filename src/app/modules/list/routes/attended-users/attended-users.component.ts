@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/shared/service/user.service';
 import { Router } from '@angular/router';
+
+import { UserService } from 'src/app/shared/service/user.service';
+import { User } from 'src/app/shared/interfaces/peopleList.interface';
+import { UserStatus } from 'src/app/shared/enums/user-status.enum';
 
 @Component({
   selector: 'app-attended-users',
@@ -8,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./attended-users.component.scss']
 })
 export class AttendedUsersComponent implements OnInit {
-  private users = []
+  private users:User[]
 
   constructor(private userService: UserService, private route: Router) { }
 
@@ -17,7 +20,10 @@ export class AttendedUsersComponent implements OnInit {
   }
 
   getUsers(){
-    this.users = this.userService.getUsersType("attended");
+    this.userService.getUserList().subscribe(res => {
+      this.users = res.results.filter( user => user.status === UserStatus.ATTENDED )
+      this.userService.setAllUsers(res)
+    });
   }
 
 }

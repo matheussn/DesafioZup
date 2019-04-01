@@ -34,7 +34,7 @@
         <div class="col-lg-1 m-auto">
           <span class="item_icon">
             <core-icon *ngIf="!(url == '/trash')"
-              (click)="setUser(item.login.username,'trash')"
+              (click)="setUser(item.login.username,'TRASH')"
               class=""
               categorie="solid"
               size="tiny"
@@ -43,7 +43,7 @@
           </span>
           <span class="item_icon">
             <core-icon *ngIf="!(url == '/')"
-              (click)="setUser(item.login.username,'all')"
+              (click)="setUser(item.login.username,'ALL')"
               class="item_icon"
               categorie="solid"
               size="tiny"
@@ -52,7 +52,7 @@
           </span>
           <span class="item_icon">
             <core-icon *ngIf="!(url == '/attended')"
-              (click)="setUser(item.login.username,'attended')"
+              (click)="setUser(item.login.username,'ATTENDED')"
               class="item_icon"
               categorie="solid"
               size="tiny"

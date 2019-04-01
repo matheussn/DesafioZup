@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/service/user.service';
+import { PeopleList } from 'src/app/shared/interfaces/peopleList.interface';
 
 @Component({
   selector: 'app-user',
@@ -8,11 +9,15 @@ import { UserService } from 'src/app/shared/service/user.service';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private userService: UserService) {
-    this.userService.getUsers()
-  }
+  sideOpen: boolean;
+
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+  }
+
+  setSide(event) {
+    this.sideOpen = !this.sideOpen;
   }
 
 }
